@@ -1,0 +1,346 @@
+/* Custom Elements Added
+----------------------------------------------------------------------------------------*/
+h3.current{
+	color: #FF72F7 !important;	
+	/*font-size: 24px !important; */
+}
+#portfolio-filter {
+	margin: 0 0 20px 0;
+	text-align: left;
+}
+#portfolio-filter ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+  }
+#portfolio-filter li {
+    margin-right: 25px;
+    float: left;
+}
+#portfolio-filter li a {
+	-webkit-transition: color .1s ease-in-out;
+	-o-transition: color .1s ease-in-out;
+	-moz-transition: color .1s ease-in-out;
+	-ms-transition: color .1s ease-in-out;
+	transition: color .1s ease-in-out;
+	text-decoration: none;
+	color: #666;
+}    
+#portfolio-filter li a:hover,
+#portfolio-filter li a.current,
+#portfolio-filter li a.active {
+    color: #FF72F7 !important;
+}  
+
+/* Isotope Filtering */
+.isotope-item { z-index: 2; margin-bottom: 30px; }
+.isotope-hidden.isotope-item { pointer-events: none; z-index: 1; }
+
+/* Isotope CSS3 transitions */
+.isotope, .isotope .isotope-item { -webkit-transition-duration: 0.8s; -moz-transition-duration: 0.8s; -ms-transition-duration: 0.8s; -o-transition-duration: 0.8s; transition-duration: 0.8s; }
+.isotope { -webkit-transition-property: height, width; -moz-transition-property: height, width; -ms-transition-property: height, width; -o-transition-property: height, width; transition-property: height, width; }
+.isotope .isotope-item { -webkit-transition-property: -webkit-transform, opacity; -moz-transition-property: -moz-transform, opacity; -ms-transition-property: -moz-transform, opacity; -o-transition-property: top, left, opacity; transition-property: transform, opacity; }
+
+/* disabling Isotope CSS3 transitions */
+.isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition { -webkit-transition-duration: 0s; -moz-transition-duration: 0s; -ms-transition-duration: 0s; -o-transition-duration: 0s; transition-duration: 0s; }
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	11.	Image Overlay/Hover Styles
+/*-----------------------------------------------------------------------------------*/
+
+.view {
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    border-radius: 5px;
+}
+
+.view .mask, 
+.view .content {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+	
+}
+
+.view .view-more h2:hover {
+  color: #fff;
+}
+
+.view-more h2 .icon-plus {
+  color: #1ca9e4;
+}
+
+.view-first .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   background-color: rgba(0,0,0, 0.1);
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+   width:100%;
+   height:100%;
+}
+
+.view-first:hover .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=90)";
+   filter: alpha(opacity=90);
+   opacity: .9;
+}
+
+.view img {
+/*  max-width: 100%;*/
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  border: 1px solid #ededed;
+/*
+  -webkit-transition: -webkit-transform 3s linear;
+  -moz-transition: -moz-transform 3s linear;
+  -o-transition: -o-transform 3s linear;
+  transition: transform 3s linear;
+*/
+    -webkit-transition: all .6s linear;
+  -o-transition: all .6s linear;
+  -moz-transition: all .6s  linear;
+  -ms-transition: all .6s linear;
+  transition: all .6s linear;
+  border-radius: 5px;
+/*
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+*/
+}
+
+.view img:hover {
+/*
+     -webkit-animation: swing 1.1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+*/
+    
+    border: 8px solid #fff;
+/*    border: 8px solid #a3dae3;*/
+    -webkit-transition: border-color,0.25s;
+    -moz-transition: border-color,0.25s;
+    -o-transition: border-color,0.25s;
+    transition: border-color,0.25s;
+
+/*
+	-webkit-transform: scale(.97);
+	-moz-transform: scale(.97);
+	-ms-transform: scale(.97);
+	-o-transform: scale(.97);
+	transform: scale(.97);
+*/
+/*
+    	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	transform: scale(1.05);
+*/
+/*    border-radius: 10px;*/
+
+}
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+/*
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+*/
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+/*
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+*/
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+}
+
+.view-first {
+  padding: 0;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -ms-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.media-box h2{
+  position: absolute;
+	top: 10%;
+  left: 10%;
+	width: 40%;
+  color: #fff;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #fff;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.media-box h2 a,
+.latest-article h2 a {
+  color: #fff;
+  text-decoration: none;
+}
+.media-box .project-cat {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  font-size: 11px;
+  color: #fff;
+  text-transform: lowercase;
+}
+.media-box .project-cat a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+.media-box {
+	position: relative;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  15. Media Queries (Responsive layout styling for Smartphone, Tablet etc...)
+/*-----------------------------------------------------------------------------------*/
+
+
+
+ 
+  /* Landscape phone to portrait tablet */
+  @media (max-width: 768px) {
+    
+    .media-box h2, 
+    .latest-article h2 {
+    	font-size: 12px;
+    }
+
+}
+
+  /* Portrait tablet to landscape and desktop */
+  @media (min-width: 768px) and (max-width: 1200px) {
+
+    .media-box h2, 
+    .latest-article h2 {
+      font-size: 14px;
+    }
+
+}
+
+/*@media (min-width: 1200px) {
+.view img {
+  max-width: 100%;
+  width: 100%;
+  height: 244px;
+  display: block;
+  position: relative;
+}
+}
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+.view img {
+  max-width: 100%;
+  width: 100%;
+  height: 150px;
+  display: block;
+  position: relative;
+}
+}
+
+
+@media (max-width: 767px) {
+.view img {
+  max-width: 100%;
+  width: 100%;
+  height: 150px;
+  display: block;
+  position: relative;
+}
+}*/
+ 
+
+
+/* And some IE8 fixes, well because it's IE!!!
+----------------------------------------------------------------------------------------*/
+.ie8 .media-box h2,
+.ie8 .media-box .project-cat {
+ position: static;
+ margin-left: 20px;
+}
