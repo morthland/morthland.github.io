@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Work folder fix
+RewriteBase /
+RewriteRule ^work/$ /work [R=301,QSA,L]
+
+# Hide extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Disable Automatic Directory detection
+DirectorySlash Off
+
